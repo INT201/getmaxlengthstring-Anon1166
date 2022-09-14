@@ -6,22 +6,20 @@ function getMaxLengthString(arrayOfString) {
   }
   let a = [...arrayOfString]
   let max = 0
-  let b,bb
+  let b
   for(let i = 0; i < a.length; i++){
     if(a[i].length > max){
+      b = []
       max = a[i].length 
-      b = i
     }
     if(a[i].length === max){
-      bb = i
+      b.push(a[i])
     }
   }
-  if(bb !== b){
-    return arrayOfString = [a[b],a[bb]];
-  }else {
-    return arrayOfString = [a[b]];
-  }
+  return b;
 }
 
 module.exports = getMaxLengthString
-console.log(getMaxLengthString(['hi']));
+
+
+  
